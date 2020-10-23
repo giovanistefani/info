@@ -1,0 +1,128 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Action Coming Soon Responsive Widget Template : W3layouts</title>
+	
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!--/Style-CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+	<link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
+
+	<!-- font-awesome-icons -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<section class="w3l-coming-soon-page">
+		<div class="coming-page-info-6">
+			<div class="wrapper">
+				<div class="header">
+					<div class="logo">
+						<a class="brand-logo" href="#index.html">
+							<img src="images/logo1.png" alt="InfoIntelligence" title="InfoIntelligence-logo" style="height:35px;"/>
+						</a>
+					</div>
+					<!--<div class="button text-right">
+						<a href="#contact" class="btn contact">Contact Us</a>
+					</div>-->
+				</div>
+				<div class="coming-block">
+					<h4>Fiquem ligados</h4>
+					<h1>Nosso novo Website <br> Será lançado em breve</h1>
+					<div class="countdown">
+						<div class="countdown__days">
+							<div class="number"></div>
+							<span class>Dias</span>
+						</div>
+
+						<div class="countdown__hours">
+							<div class="number"></div>
+							<span class>Horas</span>
+						</div>
+
+						<div class="countdown__minutes">
+							<div class="number"></div>
+							<span class>Minutos</span>
+						</div>
+
+						<div class="countdown__seconds">
+							<div class="number"></div>
+							<span class>Segundos</span>
+						</div>
+					</div>
+					<!--<form action="#" method="post">
+						<p>Avise-me quando estiver no ar:</p>
+						<div class="input">
+							<input type="email" placeholder="Email Address" required="">
+						</div>
+						<div class="button">
+							<button class="btn">Avise-me</button>
+						</div>
+					</form>-->
+				</div>
+				<div class="copyright-footer">
+					<div class="w3l-copy-right-left">
+						<p>© 2020 Infointelligence. Made with <span class="fa fa-heart"></span> | Designed by <a
+								href="https://w3layouts.com" target="_blank">W3layouts</a></p>
+					</div>
+					<div class="w3l-copy-right">
+						<ul class="social">
+							<li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			(() => {
+				// Specify the deadline date
+				const deadlineDate = new Date('November 12, 2020 18:00:00').getTime();
+
+				// Cache all countdown boxes into consts
+				const countdownDays = document.querySelector('.countdown__days .number');
+				const countdownHours = document.querySelector('.countdown__hours .number');
+				const countdownMinutes = document.querySelector('.countdown__minutes .number');
+				const countdownSeconds = document.querySelector('.countdown__seconds .number');
+
+				// Update the count down every 1 second (1000 milliseconds)
+				setInterval(() => {
+					// Get current date and time
+					const currentDate = new Date().getTime();
+
+					// Calculate the distance between current date and time and the deadline date and time
+					const distance = deadlineDate - currentDate;
+
+					// Calculations the data for remaining days, hours, minutes and seconds
+					const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+					// Insert the result data into individual countdown boxes
+					countdownDays.innerHTML = days;
+					countdownHours.innerHTML = hours;
+					countdownMinutes.innerHTML = minutes;
+					countdownSeconds.innerHTML = seconds;
+				}, 1000);
+			})();
+		</script>
+
+	</section>
+	<!-- //coming-61-w3l-vv-section -->
+
+</body>
+
+</html>
